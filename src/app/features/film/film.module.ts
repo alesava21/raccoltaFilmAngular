@@ -16,12 +16,12 @@ const routes: Routes = [
     component: FilmCreateComponent
   },
   {
-    path: '/:id',
-    component: FilmDetailComponent
-  },
-  {
     path: 'edit/:id',
     component: FilmCreateComponent
+  },
+  {
+    path: 'detail/:id',
+    component: FilmDetailComponent
   },
   { path: '', redirectTo: 'list', pathMatch: 'full' }
 ]
