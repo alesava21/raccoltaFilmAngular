@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmCreateComponent } from './film/film-create/film-create.component';
-import { FilmDetailComponent } from './film/film-detail/film-detail.component';
-import { FilmListComponent } from './film/film-list/film-list.component';
-import { RegistaCreateComponent } from './regista/regista-create/regista-create.component';
-import { RegistaListComponent } from './regista/regista-list/regista-list.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'regista/list', component: RegistaListComponent },
-  { path: 'regista/create', component: RegistaCreateComponent },
-  { path: 'film/list', component: FilmListComponent },
-  { path: 'film/create', component: FilmCreateComponent },
-  { path: 'film/:id', component: FilmDetailComponent },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./features/welcome/welcome.module').then(m=> m.WelcomeModule)
+  },
+  {
+    path: 'regista',
+    loadChildren: () => import('./features/regista/regista.module').then(m=> m.RegistaModule)
+  },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' }
 ];
 
