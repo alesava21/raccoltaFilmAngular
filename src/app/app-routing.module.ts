@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'regista',
     loadChildren: () => import('./features/regista/regista.module').then(m=> m.RegistaModule)
   },
+  {
+    path: 'film',
+    loadChildren: () => import('./features/film/film.module').then(m=> m.FilmModule)
+  },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' }
 ];
 
