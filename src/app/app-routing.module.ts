@@ -14,7 +14,8 @@ const routes: Routes = [
     path: 'film',
     loadChildren: () => import('./features/film/film.module').then(m=> m.FilmModule)
   },
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' }
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', redirectTo: '/welcome', pathMatch: 'full' }
 ];
 
 @NgModule({
