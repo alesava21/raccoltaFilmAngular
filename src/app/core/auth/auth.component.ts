@@ -30,6 +30,7 @@ export class AuthComponent implements OnInit, OnDestroy {
     if (!loginForm.invalid) {
       this.authService.login(loginForm.value).pipe(
         takeUntil(this.destroy$)).subscribe(res => {
+        this.authService.setUserLogged(res);
         this.router.navigateByUrl("welcome")
       })
     }

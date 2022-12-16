@@ -13,6 +13,7 @@ export class AuthService {
   private userLogggedSubject$: BehaviorSubject<user | null> = new BehaviorSubject<user | null>(null);
 
   login(loginForm: user):Observable<user>{
+    console.log(loginForm)
     return of ({username: loginForm.username, token: "123456"})
   }
 

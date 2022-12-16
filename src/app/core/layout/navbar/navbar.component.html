@@ -34,8 +34,8 @@
             </ul>
         </div>
         <div class="col-md-3 text-end">
-            <p class="navbar-text">Utente: Pippo
-                <a href="">Logout</a>
+            <p class="navbar-text">Utente:{{(authService.getUserLogged() | async)?.username}}
+                <a href="" (click)="onClick()">Logout</a>
             </p>
         </div>
     </div>
