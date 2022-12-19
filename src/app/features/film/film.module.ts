@@ -20,7 +20,7 @@ const routes: Routes = [
     component: FilmCreateComponent
   },
   {
-    path: 'detail/:id',
+    path: ':id',
     component: FilmDetailComponent
   },
   { path: '', redirectTo: 'list', pathMatch: 'full' }

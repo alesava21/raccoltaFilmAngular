@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let filmItem of filmList" [routerLink]="['/film',filmItem.id]">
+                            <tr *ngFor="let filmItem of filmList" [routerLink]="['/film',filmItem.id]" style="cursor: pointer;">
                                 <td>{{filmItem.id}}</td>
                                 <td>{{filmItem.titolo}}</td>
                                 <td>{{filmItem.genere}}</td>

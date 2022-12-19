@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistaListComponent } from './regista-list/regista-list.component';
 import { RegistaService } from './regista.service';
 import { RegistaCreateComponent } from './regista-create/regista-create.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -25,12 +26,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     RegistaListComponent,
-    RegistaCreateComponent
+    RegistaCreateComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    SharedModule
   ],
   providers: [],
 })

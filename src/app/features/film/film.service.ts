@@ -6,8 +6,7 @@ import { Film } from 'src/app/model/film';
   providedIn: 'root'
 })
 export class FilmService {
-
-  private apiServer = 'http://localhost:8080/api/film';
+private apiServer = 'http://localhost:8080/api/film';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -58,4 +57,5 @@ export class FilmService {
       return of(result as T);
     };
   }
+  
 }
